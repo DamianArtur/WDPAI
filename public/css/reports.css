@@ -1,0 +1,152 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.div-logo {
+    height: 20vh;
+    width: 20vw;
+
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 17vh;
+    width: 17vw;
+}
+
+.title {
+    width: 30vw;
+
+    font-family: 'Lobster', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3em;
+
+    color: #000000;
+    text-shadow: 7px 7px 4px rgba(0, 0, 0, 0.25);
+}
+
+main {
+    width: 100vw;
+    height: 80vh;
+}
+
+#map {
+    width: 100vw;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.marker {
+    background-image: url('/public/img/mapbox-icon.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.search-bar > input {
+    background: #F0F0F0;
+    border: 3px solid #000000;
+    filter: drop-shadow(7px 7px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 90px;
+    width: 15vw;
+    padding: 1em;
+    margin-right: 3em;
+
+    font-family: 'Inter', serif;
+}
+
+.login-button {
+    background: #000000;
+    filter: drop-shadow(7px 7px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 90px;
+    padding: 1em;
+    margin-right: 1em;
+    width: 20vw;
+
+    color: white;
+    font-family: 'Inter', serif;
+}
+
+.plus-button {
+    width: 8em;
+    height: 8em;
+    position: fixed;
+    top: 80vh;
+    left: 90vw;
+
+    background: #000000;
+    box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 90px;
+}
+
+.plus-button > img {
+    filter: invert(1);
+}
+
+@media only screen and (max-device-width: 700px) {
+
+    header {
+        height: 15vh;
+        justify-content: space-around;
+    }
+
+    main {
+        height: 85vh;
+    }
+
+    #map {
+        height: 85vh;
+    }
+
+    .div-logo {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .title {
+        display: none;
+    }
+
+    .search-bar > input {
+        width: 40vw;
+        margin: 1em;
+        padding: 1em;
+    }
+
+    .login-button {
+        padding: 1em;
+        width: 40vw;
+        margin: 1em;
+    }
+
+    .plus-button {
+        left: 65vw;
+    }
+}

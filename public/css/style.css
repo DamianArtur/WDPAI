@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: transparent linear-gradient(116.82deg, #D3E1BC 0%,  #6F9E31 100%) 0 0 no-repeat padding-box;
+}

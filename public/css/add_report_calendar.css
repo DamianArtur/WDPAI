@@ -1,0 +1,220 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.div-logo {
+    height: 20vh;
+    width: 20vw;
+
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 17vh;
+    width: 17vw;
+}
+
+.title {
+    width: 90vw;
+    padding-left: 1.5em;
+
+    font-family: 'Lobster', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4em;
+
+    color: #000000;
+    text-shadow: 7px 7px 4px rgba(0, 0, 0, 0.25);
+}
+
+.return-reports-button {
+    background: #000000;
+    filter: drop-shadow(7px 7px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 90px;
+    padding: 1em;
+    margin-right: 10em;
+    width: 15vw;
+
+    color: white;
+    font-family: 'Inter', serif;
+}
+
+main {
+    width: 100vw;
+    height: 80vh;
+}
+
+#map {
+    width: 100vw;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.panel {
+    width: 50vw;
+    height: 80vh;
+    position: fixed;
+    left: 50vw;
+    top: 20vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.icon {
+    width: 8vw;
+    height: 12vh;
+}
+
+.report-logo {
+    width: 10vw;
+    height: 15vh;
+    margin-top: 0.5em;
+
+    background: #FEFEFE;
+    border: 3px solid #000000;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-report-form {
+    width: 40vw;
+    height: 60vh;
+    padding-bottom: 1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background: #FEFEFE;
+    border: 5px solid #000000;
+    box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 45px;
+}
+
+input, textarea {
+    background: #F0F0F0;
+    border: 3px solid #000000;
+    filter: drop-shadow(7px 7px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    padding: 1vh;
+    margin: 1vh;
+    width: 80%;
+    font-family: 'Inter', serif;
+}
+
+.latitude-input, .longitude-input, .type-input {
+    pointer-events: none;
+}
+
+.type-input::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+button {
+    background: #000000;
+    filter: drop-shadow(7px 7px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 90px;
+
+    height: 3em;
+    width: 80%;
+    border: none;
+    color: white;
+
+    font-family: 'Inter', serif;
+}
+
+.marker {
+    background-image: url('/public/img/mapbox-icon.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@media only screen and (max-device-width: 700px) {
+
+    header {
+        display: none;
+    }
+
+    main {
+        height: 100vh;
+    }
+
+    #map {
+        height: 100vh;
+    }
+
+    .panel {
+        width: 100vw;
+        height: 50vh;
+        left: 0;
+        top: 50vh;
+    }
+
+    .icon {
+        width: 12vw;
+        height: 7vh;
+    }
+
+    .report-logo {
+        width: 25vw;
+        height: 8vh;
+        margin: 0;
+    }
+
+    .add-report-form {
+        width: 90vw;
+        height: 38vh;
+    }
+
+    input, textarea {
+        padding: 0.5vh;
+        margin: 0.25vh;
+    }
+
+    .latitude-input, .longitude-input, .type-input {
+        pointer-events: none;
+    }
+
+    .type-input::placeholder {
+        color: black;
+        opacity: 1;
+    }
+
+    button {
+        height: 2em;
+    }
+}
